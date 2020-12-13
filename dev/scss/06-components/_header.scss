@@ -1,0 +1,82 @@
+.header{
+    &__logo{
+        width: 206px;
+        object-fit: contain;
+
+        @media(max-width: $mq5){ width: 150px; }
+
+    }
+    &-rc{
+        @include flex(flex, space-between, center, row, nowrap);
+        @media(max-width: $mq2){ display: none; }
+    }
+    &__trigger{
+        display: none;
+        @media(max-width: $mq2){ display: inherit; }
+
+        &-icon{
+            width: 25px;
+            object-fit: contain;
+        }
+    }
+}
+.main-menu{
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__link{
+        margin: 0 15px;
+        transition: $transition;
+
+        &:hover{
+            color: $black;
+            transition: $transition;
+        }
+    }
+}
+.info{
+    display: flex;
+    align-items: center;
+
+    &__call{
+        width: 46px;
+        height: 46px;
+        margin: 15px;
+        padding: 8px;
+
+        background-color: $purple-2;
+        border-radius: 50%;
+
+        &-icon{
+            width: 100%;
+            height: 100%;
+            opacity: .925;
+            transition: $transition;
+
+            &:hover{
+                opacity: 1;
+                transition: $transition;
+            }
+        }
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 141px;
+        height: 50px;
+
+        font-weight: 400;
+        border-radius: 100px;
+        background-color: $purple-2;
+        color: $white;
+        transition: $transition;
+
+        &:hover{
+            color: $white;
+            transition: $transition;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+doctype html
+html(lang="es", dir="ltr")
+    head
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(charset="utf-8")     
+        meta(name="author", content="Ricardo Oliva Alonso")
+        meta(name="title", content="Ricardo Oliva Alonso | Desarrollador Web | UpCrunch")
+        meta(name="description", content="Hola soy desarrollador web y esta página esta basada en UpCrunch.")
+        meta(name="robots", content="index, follow")
+        title Ricardo Oliva Alonso | Desarrollador Web | UpCrunch
+           
+        meta(name="theme-color", content="#806bff")      
+        link(rel="stylesheet", href="css/styles.css")  
+        link(href="img/favicon.png", rel="shorcut icon", type="image/x-icon")
+        script(src="js/reveal.min.js")
+
+    body
+        - let br = '<br>'
+        
+        include header
+        include hero 
+        div.summary-mc
+            include summary
+        include features
+        div.testimonials-mc
+            include testimonials
+        include plans
+        div.ideas-mc
+            include ideas
+        include call
+        include footer
+
+        script( src="js/main.js", defer)
+    
+
+
+
+    

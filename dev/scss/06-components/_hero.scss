@@ -1,0 +1,80 @@
+.hero{
+
+    &-lc{
+        width: 50%;
+        max-width: 525px;
+        margin-left: 50px;
+
+        @media(max-width: $mq2){ margin-left: 0; }
+        @media(max-width: $mq4){
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+        &__title{
+            @include f60();
+            color: $black;
+        }
+        &__description{
+            width: 100%;
+            max-width: 350px;
+            margin: 40px 0 80px;
+
+            @include f20();
+            color: $gray-2;
+
+            @media(max-width: $mq2){ margin: 30px 0 50px; }
+            @media(max-width: $mq4){ margin: 30px 0 60px; }
+        }
+
+        &-form{
+
+            &__input,
+            &__button{
+                height: 60px;
+                width: 350px;
+
+                @include f18();
+                text-align: center;
+                border-radius: 100px;
+                color: $black;
+                background-color: $white-2;
+
+                @media(max-width: $mq5){ width: 100%; }
+            }
+            &__input{ padding: 0 10px;}
+            &__button{
+                height: 50px;
+                margin: 10px 0;
+
+                @include f19();
+                background-color: $purple-2;
+                color: $white;
+                opacity: .9;
+                transition: $transition;
+
+                &:hover{
+                    transition: $transition;
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+            &__info{
+                width: 100%;
+                max-width: 350px;
+                margin-top: 6px;
+
+                @include f14();
+                text-align: center;
+                color: $gray-1;
+            }
+        }
+    &-rc{
+        width: 50%;
+        @media(max-width: $mq4){display: none; }
+    }
+        &__bg{
+            max-width: 100%;
+            margin-left: 15px;
+        }
+}
